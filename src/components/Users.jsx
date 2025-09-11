@@ -85,7 +85,7 @@ export default function Users() {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      await api.put(`/api/users/${editUser.id}/`, editUser);
+      await api.patch(`/api/users/${editUser.id}/`, editUser);
       setEditUser(null);
       fetchUsers();
       setMessage("✅ Utilisateur mis à jour !");
