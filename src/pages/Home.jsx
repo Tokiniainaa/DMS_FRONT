@@ -3,15 +3,23 @@ import DocumentsChart from "../components/Chart";
 
 function Home() {
   return (
-    <div>
-      <h2>Documents par catégorie</h2>
-      <DocumentsChart type="category" />
+    <div className="space-y-8 p-4">
+      <div>
+        <h2 className="text-2xl text-center mb-2 ">Documents par catégorie</h2>
+        <DocumentsChart type="category" />
+      </div>
 
-      <h2>Documents par utilisateur</h2>
-      <DocumentsChart type="user" />
+      <div>
+        <h2 className="text-2xl text-center mb-2 ">
+          Documents par utilisateur
+        </h2>
+        <DocumentsChart type="user" />
+      </div>
 
-      <h2>Documents par date</h2>
-      <DocumentsChart type="date" />
+      <div>
+        <h2 className="text-2xl text-center mb-2 ">Documents par date</h2>
+        <DocumentsChart type="date" />
+      </div>
     </div>
   );
 }
