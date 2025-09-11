@@ -128,9 +128,9 @@ function Document({ document, onDelete, onShare, owners }) {
       {/* 🔹 Modale partage */}
       {showShareForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-          <div className="bg-white p-6 rounded-xl shadow-lg w-[400px] relative">
+          <div className="bg-gray-900 p-6 rounded-xl shadow-lg w-[400px] relative">
             <button
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-900 text-xl"
+              className="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-xl"
               onClick={() => setShowShareForm(false)}
             >
               &times;
@@ -147,7 +147,7 @@ function Document({ document, onDelete, onShare, owners }) {
                 className="select select-bordered w-full"
                 required
               >
-                <option value="">-- Sélectionner un utilisateur --</option>
+                <option value="">Sélectionner un utilisateur</option>
                 {owners.map((owner) => (
                   <option key={owner} value={owner}>
                     {owner}
@@ -169,7 +169,7 @@ function Document({ document, onDelete, onShare, owners }) {
                 <option value="download">Téléchargement</option>
               </select>
 
-              <button type="submit" className="btn btn-success w-full">
+              <button type="submit" className="btn btn-success w-20 ">
                 Partager
               </button>
             </form>

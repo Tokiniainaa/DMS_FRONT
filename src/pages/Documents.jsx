@@ -46,7 +46,8 @@ export default function Documents() {
       const params = new URLSearchParams();
       if (search) params.append("search", search);
       if (filters.category) params.append("category__name", filters.category);
-      if (filters.owner) params.append("owner__username", filters.owner);
+      if (filters.owner)
+        params.append("owner__username__iexact", filters.owner);
       if (filters.startDate)
         params.append("uploaded_at__gte", filters.startDate);
       if (filters.endDate) params.append("uploaded_at__lte", filters.endDate);

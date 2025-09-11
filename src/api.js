@@ -5,6 +5,8 @@ import { ACCESS_TOKEN, REFRESH_TOKEN } from "./constants.js"
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 })
+console.log("API URL:", import.meta.env.VITE_API_URL);
+
 
 // Intercepteur pour ajouter le token à chaque requête
 api.interceptors.request.use(

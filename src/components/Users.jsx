@@ -63,7 +63,7 @@ export default function Users() {
       });
     } catch (err) {
       console.error(err);
-      setMessage("❌ Impossible de créer l'utilisateur");
+      setMessage("❌ You're not authorized to create a user.");
     }
   };
 
@@ -77,7 +77,7 @@ export default function Users() {
       setMessage("✅ Utilisateur supprimé !");
     } catch (err) {
       console.error(err);
-      setMessage("❌ Impossible de supprimer l'utilisateur");
+      setMessage("❌ You're not authorized to delete user.");
     }
   };
 
@@ -91,7 +91,7 @@ export default function Users() {
       setMessage("✅ Utilisateur mis à jour !");
     } catch (err) {
       console.error(err);
-      setMessage("❌ Impossible de mettre à jour l'utilisateur");
+      setMessage("❌ You're not authorized to update user.");
     }
   };
 
